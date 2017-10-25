@@ -177,7 +177,7 @@ namespace dsa {
 
 offsetNames getArgFieldNames(Function &F, unsigned argNumber, StringRef argName, std::string& structName) {
 	offsetNames offNames;
-	assert((argNumber == 0) &&
+	assert((argNumber != 0) &&
 			"Request for return type information. Not supported");
 	if (argNumber > F.arg_size()) {
 		errs() << "### WARN : requested data for non-existent element\n";
